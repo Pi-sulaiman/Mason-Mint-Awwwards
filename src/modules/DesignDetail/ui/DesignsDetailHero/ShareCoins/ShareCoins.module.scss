@@ -17,6 +17,44 @@
   }
 }
 
+.toast{
+  column-gap: 16rem;
+  
+    & > div{
+      &:nth-child(1){
+        width: 24rem;
+        height: 24rem;
+        border-radius: 50%;
+          
+          & > div{
+              &:nth-child(2){
+                transform: scale(1.5);
+              }
+          }
+      }
+      
+      &:nth-child(2){
+        margin: 0;
+      }
+    }
+  
+    &-success{
+      & > div {
+        &:nth-child(1) {
+          background-color: var(--success);
+        }
+      }
+    }
+
+    &-error{
+      & > div {
+        &:nth-child(1) {
+          background-color: var(--error);
+        }
+      }
+    }
+}
+
 @media (width <= $breakpoint-mob) {
   .linksList {
     gap: 40rem;

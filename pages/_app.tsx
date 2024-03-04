@@ -99,9 +99,12 @@ export default function App({
                       padding: '16rem 24rem',
                       border: 'initial',
                     },
-                    iconTheme: {
-                      primary: '#21D184',
-                      secondary: '#FFF',
+                    success: {
+                      duration: 5000,
+                      iconTheme: {
+                        primary: '#21D184',
+                        secondary: '#FFF',
+                      },
                     },
                   }}
                 />

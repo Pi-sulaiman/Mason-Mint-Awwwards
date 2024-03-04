@@ -30,9 +30,17 @@ const ShareCoins: FC<ShareCoinsProps> = ({ className }) => {
   const sharedUrl = `${process.env.NEXT_PUBLIC_BASE_URL}${asPath}`
 
   const handleCopy = useCallback(() => {
-    copy(sharedUrl).then(() => {
-      toast.success('Link copied!')
-    })
+    copy(sharedUrl)
+      .then(() => {
+        toast.success('Link copied!', {
+          className: classNames(styles['toast'], styles['toast-success']),
+        })
+      })
+      .catch(() => {
+        toast.error('Something went wrong!', {
+          className: classNames(styles['toast'], styles['toast-error']),
+        })
+      })
   }, [sharedUrl, copy])
 
   return (
@@ -46,16 +54,19 @@ const ShareCoins: FC<ShareCoinsProps> = ({ className }) => {
         </span>
         <Link
           href={`https://www.facebook.com/sharer/sharer.php?u=${sharedUrl}`}
+          target="_blank"
         >
           <Facebook className={styles['icon']} />
         </Link>
         <Link
           href={`https://twitter.com/intent/tweet?url=${sharedUrl}&via=twitterhandle`}
+          target="_blank"
         >
           <Twitter className={styles['icon']} />
         </Link>
         <Link
           href={`https://www.linkedin.com/sharing/share-offsite/?url=${sharedUrl}`}
+          target="_blank"
         >
           <Linkedin className={styles['icon']} />
         </Link>
