@@ -34,7 +34,7 @@ const nextConfig = {
     CLOUD_BUCKET: process.env.CLOUD_BUCKET,
   },
   images: {
-    domains: ['mason-mint-products-dev.nyc3.digitaloceanspaces.com'],
+    domains: ['mason-mint-products-dev.nyc3.digitaloceanspaces.com', 'mm-products-awwwards.nyc3.digitaloceanspaces.com'],
   },
   webpack(config, { dev }) {
     config.module.rules.push({

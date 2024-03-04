@@ -1,8 +1,13 @@
 import React, { FC, useContext, useEffect, useState } from 'react'
+import dynamic from 'next/dynamic'
 import { AnimatePresence } from 'framer-motion'
-import MainPreloader from '@/components/MainPreloader/MainPreloader'
 import { useLenis } from '@studio-freight/react-lenis'
 import { Store } from '@/utils/Store'
+
+const MainPreloader = dynamic(
+  () => import('@/components/MainPreloader/MainPreloader'),
+  { ssr: false }
+)
 
 import styles from './MainPreloader.module.scss'
 

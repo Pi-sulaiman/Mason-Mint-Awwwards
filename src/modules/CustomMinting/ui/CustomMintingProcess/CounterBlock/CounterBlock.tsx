@@ -45,13 +45,13 @@ export const CounterBlock: FC<CounterBlockProps> = ({
   const counterVariants: Variants = useMemo(() => {
     return {
       initial: {
-        y: scrollDirection === 'down' ? -300 : 300,
+        y: scrollDirection === 'down' ? '-100%' : '100%',
       },
       animate: {
         y: 0,
       },
       exit: {
-        y: scrollDirection === 'down' ? 300 : -300,
+        y: scrollDirection === 'down' ? '100%' : '-100%',
       },
     }
   }, [scrollDirection])

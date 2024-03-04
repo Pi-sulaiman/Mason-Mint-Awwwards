@@ -1,19 +1,18 @@
 import { FC, useEffect, useRef, useState } from 'react'
 import { FlipCoinTypes } from '../assets/FlipCoinTypes'
 import { MotionValue, useMotionValueEvent, useTransform } from 'framer-motion'
-
 import Lottie, { LottieRefCurrentProps } from 'lottie-react'
 const loaderJsonPromise = import('../assets/flipCoin.json')
-
-import styles from '../DiscoverMasonMintSection.module.scss'
 import { useWindowSize } from 'usehooks-ts'
 import { breakpointMob } from '@/utils/variables'
+
+import styles from '../DiscoverMasonMintSection.module.scss'
 
 type CoinProps = {
   scrollYProgress: MotionValue<number>
 }
 
-export const Coin: FC<CoinProps> = ({ scrollYProgress }) => {
+const Coin: FC<CoinProps> = ({ scrollYProgress }) => {
   const refLottie = useRef<LottieRefCurrentProps | null>(null)
   const progress = useTransform(scrollYProgress, [0, 1], [0, 61])
   const { width } = useWindowSize()
@@ -55,3 +54,5 @@ export const Coin: FC<CoinProps> = ({ scrollYProgress }) => {
     </div>
   )
 }
+
+export default Coin

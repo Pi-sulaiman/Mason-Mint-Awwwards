@@ -20,11 +20,11 @@
     overflow: hidden;
 
     span {
-      display: block;
+      display: inline-block;
       width: 125rem;
       color: var(--gray-500);
       font: var(--font-decorative);
-      line-height: 0.7;
+      line-height: 1em;
     }
   }
 

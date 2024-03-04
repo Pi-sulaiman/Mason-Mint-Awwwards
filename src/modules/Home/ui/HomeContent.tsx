@@ -1,12 +1,10 @@
 import { FC, useContext } from 'react'
 import dynamic from 'next/dynamic'
-
 import IntroSection from './IntroSection/IntroSection'
 import StorySection from './StorySection/StorySection'
 import { DiscoverMasonMintSection } from '@/components/DisocoverMasonMintSection/DiscoverMasonMintSection'
-
 import FAQSection from './FAQSection/FAQSection'
-import SellSection from './SellSection/SellSection'
+
 import {
   MarqueCarouselContext,
   MarqueCarouselContextType,
@@ -36,6 +34,10 @@ const ParallaxSection = dynamic(
   () => import('@/ui/ParallaxSection/ParallaxSection'),
   { ssr: false }
 )
+
+const SellSection = dynamic(() => import('./SellSection/SellSection'), {
+  ssr: false,
+})
 
 import styles from './HomeContent.module.scss'
 

@@ -23,8 +23,8 @@ export const data = [
     id: 3,
     subtitle: `Mason Mint's specially crafted designs exemplify distinctiveness, presenting personalized and unique representations in each individual piece.`,
     url: {
-      front: '/images/home/front_coin_1.png',
-      back: '/images/home/back_coin_1.png',
+      front: '/images/home/front_coin_2.png',
+      back: '/images/home/back_coin_2.png',
     },
   },
 ]

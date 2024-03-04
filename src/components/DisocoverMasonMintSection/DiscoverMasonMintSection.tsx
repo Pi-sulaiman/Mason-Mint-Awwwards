@@ -1,9 +1,10 @@
 import { FC, useRef } from 'react'
+import dynamic from 'next/dynamic'
 import classNames from 'classnames'
-
 import { useScroll } from 'framer-motion'
-import { Coin } from './Coin/Coin'
 import { MarqueeText } from '@/ui/MarqueeText/MarqueeText'
+
+const Coin = dynamic(() => import('./Coin/Coin'), { ssr: false })
 
 import styles from './DiscoverMasonMintSection.module.scss'
 
