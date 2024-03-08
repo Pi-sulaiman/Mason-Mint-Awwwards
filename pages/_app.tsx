@@ -92,11 +92,11 @@ export default function App({
                   position="bottom-right"
                   toastOptions={{
                     style: {
-                      fontSize: '16rem',
-                      lineHeight: '24rem',
+                      fontSize: '16px',
+                      lineHeight: '24px',
                       fontWeight: '400',
                       fontFamily: 'var(--font-family-secondary)',
-                      padding: '16rem 24rem',
+                      padding: '16px 24px',
                       border: 'initial',
                     },
                     success: {

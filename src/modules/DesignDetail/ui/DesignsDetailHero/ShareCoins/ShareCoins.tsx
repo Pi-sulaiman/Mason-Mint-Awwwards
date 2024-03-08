@@ -3,21 +3,19 @@ import classNames from 'classnames'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-
 import toast from 'react-hot-toast'
 import { useCopyToClipboard } from 'usehooks-ts'
 import { ProductProps } from '@/utils/types'
+import LinkIcon from 'public/icons/link.svg'
+import Facebook from 'public/icons/facebook.svg'
+import Twitter from 'public/icons/X.svg'
+import Linkedin from 'public/icons/linkedin.svg'
+
+import styles from './ShareCoins.module.scss'
 
 const AnimatedElement = dynamic(
   () => import('@/ui/AnimatedElement/AnimatedElement')
 )
-
-import LinkIcon from 'public/icons/link.svg'
-import Facebook from 'public/icons/facebook.svg'
-import Twitter from 'public/icons/twitter.svg'
-import Linkedin from 'public/icons/linkedin.svg'
-
-import styles from './ShareCoins.module.scss'
 
 type ShareCoinsProps = {
   className?: string

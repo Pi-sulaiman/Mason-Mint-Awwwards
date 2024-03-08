@@ -18,12 +18,12 @@
 }
 
 .toast{
-  column-gap: 16rem;
+  column-gap: 16px;
   
     & > div{
       &:nth-child(1){
-        width: 24rem;
-        height: 24rem;
+        width: 24px;
+        height: 24px;
         border-radius: 50%;
           
           & > div{
