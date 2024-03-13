@@ -103,7 +103,7 @@ export const Footer: FC = () => {
               Studiopresto
             </Link>
             <div>
-              2023 Mason Mint excellence in minting. All rights reserved.
+              2024 Mason Mint excellence in minting. All rights reserved.
             </div>
           </div>
         </div>
