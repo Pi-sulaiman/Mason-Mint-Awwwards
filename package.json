@@ -66,6 +66,7 @@
     "mongoose-paginate": "^5.0.3",
     "next": "13.4.2",
     "next-auth": "^4.24.4",
+    "next-share": "^0.27.0",
     "nextjs-progressbar": "^0.0.16",
     "normalize-wheel": "^1.0.1",
     "react": "18.2.0",

@@ -1,10 +1,14 @@
 import { FC, memo, useCallback } from 'react'
 import classNames from 'classnames'
 import dynamic from 'next/dynamic'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import toast from 'react-hot-toast'
 import { useCopyToClipboard } from 'usehooks-ts'
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  LinkedinShareButton,
+} from 'next-share'
 import { ProductProps } from '@/utils/types'
 import LinkIcon from 'public/icons/link.svg'
 import Facebook from 'public/icons/facebook.svg'
@@ -50,24 +54,15 @@ const ShareCoins: FC<ShareCoinsProps> = ({ className }) => {
         <span>
           <LinkIcon className={styles['icon']} onClick={handleCopy} />
         </span>
-        <Link
-          href={`https://www.facebook.com/sharer/sharer.php?u=${sharedUrl}`}
-          target="_blank"
-        >
+        <FacebookShareButton url={sharedUrl}>
           <Facebook className={styles['icon']} />
-        </Link>
-        <Link
-          href={`https://twitter.com/intent/tweet?url=${sharedUrl}&via=twitterhandle`}
-          target="_blank"
-        >
+        </FacebookShareButton>
+        <TwitterShareButton url={sharedUrl}>
           <Twitter className={styles['icon']} />
-        </Link>
-        <Link
-          href={`https://www.linkedin.com/sharing/share-offsite/?url=${sharedUrl}`}
-          target="_blank"
-        >
+        </TwitterShareButton>
+        <LinkedinShareButton url={sharedUrl}>
           <Linkedin className={styles['icon']} />
-        </Link>
+        </LinkedinShareButton>
       </AnimatedElement>
     </div>
   )
