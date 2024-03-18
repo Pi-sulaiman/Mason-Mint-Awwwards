@@ -22,29 +22,29 @@ const LogoBlock = () => {
 
 const navigationFooterLinks = [
   {
-    category: 'sitemap',
+    category: 'Sitemap',
     links: [
       { title: 'About Us', href: routes.public.about },
       { title: 'Contact Us', href: routes.public.contactUs },
     ],
   },
   {
-    category: 'products',
+    category: 'Products',
     links: [
       { title: 'Designs', href: routes.public.designs },
       { title: 'Custom Minting', href: routes.public.customMinting },
       { title: 'Packaging', href: routes.public.packaging },
     ],
   },
-  {
-    category: 'follow us',
-    links: [
-      { title: 'Facebook', href: '' },
-      { title: 'Instagram', href: '' },
-      { title: 'Twitter', href: '' },
-      { title: 'Linkedin', href: '' },
-    ],
-  },
+  // {
+  //   category: 'follow us',
+  //   links: [
+  //     { title: 'Facebook', href: '' },
+  //     { title: 'Instagram', href: '' },
+  //     { title: 'Twitter', href: '' },
+  //     { title: 'Linkedin', href: '' },
+  //   ],
+  // },
 ]
 
 const NavigationBlock = () => {
